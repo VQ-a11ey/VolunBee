@@ -10,6 +10,18 @@ import SwiftUI
 struct homepage: View {
     @Namespace private var animationNamespace
     @State private var expanded = false
+    @State private var search = ""
+    
+    let categories = ["Animal Shelters", "Food Banks"]
+    
+    var filtered : [String]
+        if search.isEmpty {
+        return categories
+        } else {
+            return categories.filter {$0.lowercased().contains(searchText.lowercased())
+            }
+        }
+    
     
     var body: some View {
         ZStack{
@@ -35,16 +47,18 @@ struct homepage: View {
                     
                 }
                 .padding(.bottom)
-                TextField("Search...", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
-                    .border(Color.gray, width:1)
-                    .font(.title)
                 NavigationView {
                     VStack{
                         DisclosureGroup("Categories", isExpanded: $expanded){
+                            TextField("Search categories...", text: $search)
                             
-                            NavigationLink(destination: animalShelter()) {
-                                Text("Animal Shelters")
+                            ForEach(filtered, id: \.self) { category in NavigationLink(destination: Text ("destination for \(category)")) {
+                                Text(category)
                             }
+                            }
+                            }
+                            
+                            
                         }
                     }
                 }
@@ -59,5 +73,5 @@ struct homepage: View {
     
 
 #Preview {
-    homepage()
+    homepage(filtered: <#[String]#>)
 }
