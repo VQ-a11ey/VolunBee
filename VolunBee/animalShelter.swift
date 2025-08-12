@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct animalShelterCatagory: View {
+struct animalShelter: View {
     var body: some View {
         ZStack {
             Image("yellowBackground")
@@ -46,5 +46,5 @@ struct animalShelterCatagory: View {
 }//end Struct
 
 #Preview {
-    animalShelterCatagory()
+    animalShelter()
 }

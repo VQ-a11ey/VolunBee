@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct homepage: View {
-   @Namespace private var animationNamespace
+    @Namespace private var animationNamespace
     @State private var expanded = false
     
     var body: some View {
@@ -24,15 +24,15 @@ struct homepage: View {
                         .fontWeight(.regular)
                         .multilineTextAlignment(.leading)
                         .lineLimit(1)
-                        
+                    
                     Spacer()
                     Image("icon")
                         .resizable(resizingMode: .stretch)
                         .aspectRatio(contentMode: .fit)
                         .padding()
                         .frame(width: 60.0)
-                        
-                        
+                    
+                    
                 }
                 .padding(.bottom)
                 TextField("Search...", text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
@@ -41,17 +41,18 @@ struct homepage: View {
                 NavigationView {
                     VStack{
                         DisclosureGroup("Categories", isExpanded: $expanded){
-                            Text("Hi")
-                            NavigationLink(destination: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Destination@*/Text("Destination")/*@END_MENU_TOKEN@*/) {
+                            
+                            NavigationLink(destination: animalShelter()) {
                                 Text("Animal Shelters")
                             }
                         }
-                        }
-                        }
-                        }
                     }
                 }
-                }
+            }
+        }
+    }
+}
+                
              //vstack
 
         
