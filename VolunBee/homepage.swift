@@ -14,14 +14,14 @@ struct homepage: View {
     
     let categories = ["Animal Shelters", "Food Banks"]
     
-    var filtered : [String]
+    var filtered : [String] {
         if search.isEmpty {
-        return categories
+            return categories
         } else {
-            return categories.filter {$0.lowercased().contains(searchText.lowercased())
+            return categories.filter {$0.lowercased().contains(search.lowercased())
             }
         }
-    
+    }
     
     var body: some View {
         ZStack{
@@ -72,5 +72,5 @@ struct homepage: View {
     
 
 #Preview {
-    homepage(filtered: <#[String]#>)
+    homepage()
 }
