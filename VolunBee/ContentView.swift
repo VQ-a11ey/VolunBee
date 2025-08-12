@@ -1,33 +1,58 @@
 //
 //  ContentView.swift
-//  VolunBee
+//  InteractiveUI
 //
-//  Created by Scholar on 8/12/25.
+//  Created by Scholar on 8/6/25.
 //
 
 import SwiftUI
 
-struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-            Text("Change one")
-            Text("Change two")
-            Text("Change three")
-            Text("new change - aanya")
-            Text("new change- vikcy")
-            Text("another new change - aanya")
-            Text("Another new change - vicky")
-            Text("new change - arohi")
-            Text("new change 2 - arohi")
-        }
-        .padding()
-    }
-}
 
+struct ContentView: View {
+    //    func ZStack() {
+    //        Image("Background")
+    //            .resizable(resizingMode: .fit)
+    //    }
+    //        .aspectRatio(contentMode: .fill)
+    //        .frame(width: 300.0, height: 300.0)
+    
+    @State private var name = ""
+    @State private var textTitle = "What is your name?"
+    
+    
+    var body: some View {
+        ZStack {
+            Image("Background")
+                .resizable(resizingMode: .stretch)
+                .aspectRatio(contentMode: .fill)
+                .padding(.top, 125.0)
+            
+                VStack {
+                    Text(textTitle)
+                        .font(
+                            .custom("AmericanTypewriter", fixedSize: 23))
+                        .multilineTextAlignment(.center)
+                    TextField("Type name here", text: $name)
+                        .padding()
+                        .multilineTextAlignment(.center)
+                        .font(.title)
+                        .border(Color.gray, width:1)
+                    Button("Submit Name") {
+                        textTitle = "Welcome, \(name)!"
+                        
+                    }//end button
+                    .font(.title2)
+                    .buttonStyle(.borderedProminent)
+                    .tint(.yellow)
+                } //end vstack
+                .offset(y:100)
+                .padding()
+            } //end zstack
+        }
+    }
+
+    
 #Preview {
     ContentView()
-}
+    }
+
