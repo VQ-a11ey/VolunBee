@@ -17,10 +17,10 @@ struct animalShelterCatagory: View {
                 .ignoresSafeArea()
             
             
-            VStack (alignment: .leading, spacing: 15) {
+            VStack (alignment: .leading, spacing: 20) {
                 
                 Text("Animal Shelters")
-                    .font(.title)
+                    .font(.largeTitle)
                     .fontWeight(.bold)
                     .multilineTextAlignment(.leading)
                     .padding(.trailing, 120)
