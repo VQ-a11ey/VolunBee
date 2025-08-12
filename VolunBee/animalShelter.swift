@@ -10,27 +10,33 @@ import SwiftUI
 struct animalShelterCatagory: View {
     var body: some View {
         ZStack {
-            Image("yellow")
-                .renderingMode(.original)
+            Image("yellowBackground")
+                .resizable(resizingMode: .stretch)
                 .aspectRatio(contentMode: .fill)
+                .padding(.top, -5.0)
+                .ignoresSafeArea()
+            
+            
             VStack (alignment: .leading, spacing: 15) {
                 
                 Text("Animal Shelters")
                     .font(.title)
                     .fontWeight(.bold)
                     .multilineTextAlignment(.leading)
+                    .padding(.trailing, 120)
                 
                 Text("SF SPCA")
                     .font(.title2)
-                    .multilineTextAlignment(.leading)
                 Text("Muttville")
                     .font(.title2)
                 Text("Grateful Dog Rescue")
                     .font(.title2)
-                    .multilineTextAlignment(.leading)
                 Text("SF Animal Care & Control")
                     .font(.title2)
-                    .multilineTextAlignment(.leading)
+                    Text("San Francisco Zoo & Gardens")
+                    .font(.title2)
+                
+                
                 
                 
             }//end VStack
