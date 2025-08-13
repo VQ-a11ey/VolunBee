@@ -12,7 +12,7 @@ struct homepage: View {
     @State private var expanded = false
     @State private var search = ""
     @State var name = ""
-    let categories = ["Animal Shelters", "Food Banks"]
+    let categories = ["Animal Shelters", "Environment"]
     
     var filtered : [String] {
         if search.isEmpty {

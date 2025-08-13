@@ -39,6 +39,7 @@ struct environment: View {
                     .font(.title2)
 
                 
+                
             }//end VStack
             .padding()
         }//end ZStack
