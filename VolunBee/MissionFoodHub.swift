@@ -22,13 +22,14 @@ struct MissionFoodHub: View {
                     .multilineTextAlignment(.center)
                     .padding(.bottom, 150)
                 VStack (spacing: 20){
-                    Text("Description:HERE")
+                    Text("Description: 3-4 hours minimum on Monday, Wednesday, and Fridays")
+                        .padding(.horizontal)
                     Text("Age limit: Unsure")
                     Text("Location: 1333 Florida St, San Francisco, California, United States, 94110")
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 40.0)
                     Text("Requirements:HERE")
-                    Text("Contact Details:missionfoodhub@gmail.com, (415) 206-0577, 701 Alabama Street San Francisco, CA 94110")
+                    Text("Contact Details: missionfoodhub@gmail.com, (415) 206-0577")
                         .padding(.horizontal, 40.0)
                 }
             }
