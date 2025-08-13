@@ -57,15 +57,13 @@ struct homepage: View {
                             } //disclosure group
                         } //2nd VStack
                         .padding(.horizontal)
-                        
-                        
-                    } //VStack
-                }
-                } //ZStack
-                .padding(.top)
-            }//nav stack
-        } //body
-                    } //struct
+                    } //NVeiw
+                }//v
+            } //ZStack
+            .padding(.top)
+        }//nav stack
+    } //boddy
+} //struct
                 
             
                 
