@@ -18,7 +18,9 @@ struct animalShelter: View {
                     .ignoresSafeArea()
                 
                 
-                VStack (alignment: .leading, spacing: 20) {
+                VStack (alignment: .leading, spacing: 40) {
+                    Spacer()
+                    Spacer()
                     
                     Text("Animal Shelters")
                         .font(.largeTitle)
@@ -39,6 +41,11 @@ struct animalShelter: View {
                     }
                     Text("San Francisco Zoo & Gardens")
                         .font(.title2)
+                    
+                    VStack {
+                        Image("flyingbee")
+                            .resizable(capInsets: EdgeInsets(top: -200.0, leading: 100.0, bottom: 10.0, trailing: 100.0), resizingMode: .stretch)
+                    }
                     
                     
                     

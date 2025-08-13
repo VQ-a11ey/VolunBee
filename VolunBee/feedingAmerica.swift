@@ -20,15 +20,20 @@ struct feedingAmerica: View {
                         .fontWeight(.heavy)
                         .foregroundColor(Color.black)
                         .multilineTextAlignment(.leading)
-                        .padding(.bottom, 150)
+                        .padding(.bottom, 90)
                     VStack (spacing: 20){
                         Text("Description:Food bank volunteers sort and pack food, distribute meals, and provide other essential help.")
+                            .multilineTextAlignment(.center)
                             .padding(.horizontal, 40.0)
                         Text("Age limit: Varies")
+                            .multilineTextAlignment(.center)
                         Text("Locations: Varies")
+                            .multilineTextAlignment(.center)
                         Text("Requirements: Varies")
-                        Text("Contact Details:National Office, 161 North Clark Street, Suite 700 Chicago, IL 60601 tel: 800-771-2303 https://www.feedingamerica.org/take-action/volunteer")
-                            .padding(.leading, 40.0)
+                            .multilineTextAlignment(.center)
+                        Text("Contact Details: \n National Office: 161 North Clark Street, Suite 700 Chicago, IL 60601 \n Phone: 800-771-2303 \n https://www.feedingamerica.org/take-action/volunteer")
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal, 20.0)
                         
                     }
                 }
