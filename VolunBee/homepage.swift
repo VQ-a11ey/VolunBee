@@ -31,15 +31,17 @@ struct homepage: View {
                     .aspectRatio(contentMode: .fill)
                     .ignoresSafeArea()
                 
-                VStack(alignment: .leading){
+                VStack(alignment: .leading, spacing: 10){
+                    Text("\n")
                     HStack(alignment: .center, spacing: 20.0){
                         Text("Welcome \(name)!")
                             .font(.title)
-                            .fontWeight(.regular)
+                            .fontWeight(.semibold)
+                            .foregroundColor(Color("brownish"))
                             .multilineTextAlignment(.leading)
                             .lineLimit(1)
                         
-                            .padding([.top, .leading], 30.0)
+                            .padding(.leading, 30.0)
                         
                         
                         
@@ -51,8 +53,26 @@ struct homepage: View {
                             .frame(width: 60.0)
                         
                         
-                    } //HStack
-                    .padding(.bottom)
+                    } //HStack'
+                    Text("Volunteering Oppurtunities in \nSan Franscisco")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color("brownish"))
+                        .padding(.leading)
+                        
+                    Text("\n🐝 Fun Fact 🐝")
+                        .font(.title)
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color("brownish"))
+                        .padding(.leading)
+                    Text("Bees remind us that even the smallest contributions can build something sweet. ")
+                        .foregroundColor(Color("brownish"))
+                        .padding([.leading, .bottom, .trailing])
+                    Text("Volunteer Now!")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color("brownish"))
+                        .padding(.leading)
                     NavigationView {
                         VStack{
                             
@@ -63,9 +83,26 @@ struct homepage: View {
                                 NavigationLink(destination: VolunBee.environment()) {
                                     Text("Enviorment")
                                 }
+                                NavigationLink(destination: VolunBee.fooddrive()) {
+                                    Text("Food Drives")
+                                }
                             } //disclosure group
-                        } //2nd VStack
-                        .padding(.horizontal)
+                            .font(.headline)
+                            .foregroundColor(Color("brownish"))
+                                Text("\n\n\n\n\n\n")
+                            ZStack {
+                                Image("flyingbee")
+                                    .resizable(resizingMode: .stretch)
+                                    .aspectRatio(contentMode: .fit)
+                                    .padding([.top, .leading])
+                                Spacer()
+                                Text("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVolunBee")
+                                    .foregroundColor(Color("brownish"))
+                                
+                            }//ZStack
+                        }
+                        .padding(.horizontal) //2nd VStack
+                        
                     } //NVeiw
                 }//v
             } //ZStack
