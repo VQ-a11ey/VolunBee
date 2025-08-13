@@ -25,9 +25,10 @@ struct animalShelter: View {
                         .fontWeight(.bold)
                         .multilineTextAlignment(.leading)
                         .padding(.trailing, 120)
-                    
-                    Text("SF SPCA")
-                        .font(.title2)
+                    NavigationLink(destination:SFSPCA()){
+                        Text("SF SPCA")
+                            .font(.title2)
+                    }
                     Text("Muttville")
                         .font(.title2)
                     Text("Grateful Dog Rescue")
