@@ -31,7 +31,7 @@ struct homepage: View {
                 .padding([.top, .trailing], -30.0)
             VStack(alignment: .leading){
                 HStack(alignment: .center, spacing: 20.0){
-                    Text("Welcome <name!>")
+                    Text("Welcome ")
                         .font(.title)
                         .fontWeight(.regular)
                         .multilineTextAlignment(.leading)
@@ -51,6 +51,7 @@ struct homepage: View {
                     VStack{
                         DisclosureGroup("Categories", isExpanded: $expanded){
                             TextField("Search categories...", text: $search)
+                                .font(.title2)
                             
                             ForEach(filtered, id: \.self) { category in NavigationLink(destination: Text ("destination for \(category)")) {
                                 Text(category)
@@ -61,7 +62,8 @@ struct homepage: View {
                             
                         }
                         }
-                        }
+            }
+            .padding(.top)
                         }
                     }
                 }

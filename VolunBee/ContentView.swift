@@ -21,12 +21,12 @@ struct ContentView: View {
     
     
     var body: some View {
+        NavigationStack{
         ZStack {
             Image("LoginPageBackground")
                 .resizable(resizingMode: .stretch)
                 .aspectRatio(contentMode: .fill)
                 .padding(.top, 125.0)
-            
                 VStack {
                     Text(textTitle)
                         .font(
@@ -37,9 +37,13 @@ struct ContentView: View {
                         .multilineTextAlignment(.center)
                         .font(.title)
                         .border(Color.gray, width:1)
-                    Button("Submit Name") {
-                        textTitle = "Welcome, \(name)!"
-                        
+
+                    NavigationLink(destination: homepage()) {
+                        Text("Submit Name")
+                            .padding()
+                            .background(Color.yellow)
+                            .foregroundColor(.white)
+                            .cornerRadius(8)
                     }//end button
                     .font(.title2)
                     .buttonStyle(.borderedProminent)
@@ -49,6 +53,7 @@ struct ContentView: View {
                 .padding()
             } //end zstack
         }
+    }
     }
 
     
