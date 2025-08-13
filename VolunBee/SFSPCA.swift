@@ -20,7 +20,7 @@ struct SFSPCA: View {
                     .fontWeight(.heavy)
                     .foregroundColor(Color.black)
                     .multilineTextAlignment(.leading)
-                    .padding(.bottom, 150)
+                    .padding(.bottom, 90)
                 VStack (spacing: 20){
                     Text("Description: Volunteering includes - Socializing with dogs and cats, Fostering, Assited Therapy, Learning to trap feral and free-roaming cats for the trap-neuter-return (TNR) program, Helping at the Mobile Vaccine Clinic, and providing General Support (photographing, greeting, gardening, and much more!)")
                         .multilineTextAlignment(.center)
