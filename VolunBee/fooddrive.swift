@@ -1,13 +1,13 @@
 //
-//  environment.swift
+//  food drive.swift
 //  VolunBee
 //
-//  Created by Scholar on 8/12/25.
+//  Created by Scholar on 8/13/25.
 //
 
 import SwiftUI
 
-struct environment: View {
+struct fooddrive: View {
     var body: some View {
         ZStack {
             Image("yellowBackground")
@@ -17,29 +17,32 @@ struct environment: View {
                 .ignoresSafeArea()
             
             
-            VStack (alignment: .leading, spacing: 20) {
-                
-                Text("Environment")
+            VStack (alignment: .leading, spacing: 40) {
+                Spacer()
+                Spacer()
+                Text("Food Drives")
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .multilineTextAlignment(.leading)
                     .padding(.trailing, 120)
                 
-                Text("San Francisco Recreation & Parks")
+                Text("San Francisco/Marin Food Bank")
                     .font(.title2)
-                Text("Hands On (Hands On Tomorrow")
+                Text("The Food Pantry")
                     .font(.title2)
-                Text("SFSU's School of the Environment")
+                Text("JFCS's Food Runners")
                     .font(.title2)
-                Text("San Francisco Environment Department")
+                Text("Mission Food Hub")
                     .font(.title2)
-                Text("Save SF bay")
+                Text("YMCA's Food Assistance")
                     .font(.title2)
-                Text("Citizens' Climate Lobby")
+                Text("Feeding America")
                     .font(.title2)
-
                 
-                
+                VStack {
+                    Image("flyingbee")
+                        .resizable(capInsets: EdgeInsets(top: -200.0, leading: 100.0, bottom: 10.0, trailing: 100.0), resizingMode: .stretch)
+                }
             }//end VStack
             .padding()
         }//end ZStack
@@ -47,5 +50,5 @@ struct environment: View {
 }//end struct
 
 #Preview {
-    environment()
+    fooddrive()
 }

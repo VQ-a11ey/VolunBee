@@ -55,10 +55,10 @@ struct ContentView: View {
             
         }//nav
     }
-    }
+}
 
     
 #Preview {
     ContentView()
-    }
+}
 
