@@ -20,7 +20,7 @@ struct SFCAC: View {
                     .fontWeight(.heavy)
                     .foregroundColor(Color.black)
                     .multilineTextAlignment(.leading)
-                    .padding(.bottom, 100)
+                    .padding(.bottom, 90)
                 VStack (spacing: 20){
                     Text("Description: Volunteering include - Small Animal Volunteers, Cat Volunteers, Vet Volunteers, Animal Transporters, OUtreach Volunteers, and Kitten (and other) Volunteers")
                         .multilineTextAlignment(.center)
@@ -30,7 +30,7 @@ struct SFCAC: View {
                     Text("Requirements: Must be able to work one year, minimum 2 hour shirt per week.")
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 2.0)
-                    Text("Contact Details: (415)554 - 9400, ACC@SFGOV.COM")
+                    Text("Contact Details:\n  Phone:(415)554 - 9400, Email:ACC@SFGOV.COM \n https://www.sfanimalcare.org/volunteer/")
                         .multilineTextAlignment(.center)
                         .padding(.horizontal)
                    
