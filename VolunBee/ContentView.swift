@@ -45,14 +45,15 @@ struct ContentView: View {
                             .foregroundColor(.white)
                             .cornerRadius(8)
                     }//end button
-                    .font(.title2)
-                    .buttonStyle(.borderedProminent)
-                    .tint(.yellow)
+                    
                 } //end vstack
                 .offset(y:100)
                 .padding()
             } //end zstack
-        }
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarHidden(true)
+            
+        }//nav
     }
     }
 

@@ -11,7 +11,7 @@ struct homepage: View {
    @Namespace private var animationNamespace
     @State private var expanded = false
     @State private var search = ""
-    
+    @State var name = ""
     let categories = ["Animal Shelters", "Food Banks"]
     
     var filtered : [String] {
@@ -26,16 +26,18 @@ struct homepage: View {
     var body: some View {
         ZStack{
             Image("background")
-                .resizable(capInsets: EdgeInsets(), resizingMode: .stretch)
+                .resizable(resizingMode: .stretch)
                 .aspectRatio(contentMode: .fill)
-                .padding([.top, .trailing], -30.0)
+                .ignoresSafeArea()
+                
             VStack(alignment: .leading){
                 HStack(alignment: .center, spacing: 20.0){
-                    Text("Welcome ")
+                    Text("Welcome \(name)")
                         .font(.title)
                         .fontWeight(.regular)
                         .multilineTextAlignment(.leading)
                         .lineLimit(1)
+                        .padding([.top, .leading], 30.0)
                         
                     Spacer()
                     Image("icon")
@@ -57,7 +59,8 @@ struct homepage: View {
                                 Text(category)
                             }
                             }
-                            }
+                        }
+                        .padding(.horizontal)
                             
                             
                         }
