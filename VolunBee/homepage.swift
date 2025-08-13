@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct homepage: View {
-   @Namespace private var animationNamespace
+    @Namespace private var animationNamespace
     @State private var expanded = false
     @State private var search = ""
     @State var name = ""
@@ -37,16 +37,19 @@ struct homepage: View {
                         .fontWeight(.regular)
                         .multilineTextAlignment(.leading)
                         .lineLimit(1)
+
                         .padding([.top, .leading], 30.0)
                         
+
+                    
                     Spacer()
                     Image("icon")
                         .resizable(resizingMode: .stretch)
                         .aspectRatio(contentMode: .fit)
                         .padding()
                         .frame(width: 60.0)
-                        
-                        
+                    
+                    
                 }
                 .padding(.bottom)
                 NavigationView {
@@ -68,8 +71,13 @@ struct homepage: View {
             }
             .padding(.top)
                         }
+
                     }
                 }
+            }
+        }
+    }
+}
                 
              //vstack
 
