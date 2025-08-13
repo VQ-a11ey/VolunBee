@@ -108,6 +108,7 @@ struct homepage: View {
             } //ZStack
             .padding(.top)
         }//nav stack
+        .navigationBarBackButtonHidden(true)
     } //boddy
 } //struct
                 

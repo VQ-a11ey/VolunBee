@@ -52,6 +52,7 @@ struct ContentView: View {
             } //end zstack
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarHidden(true)
+        
             
         }//nav
     }
