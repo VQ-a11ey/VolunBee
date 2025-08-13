@@ -32,6 +32,7 @@ struct environment: View {
                 
                 
                 
+                
             }//end VStack
             .padding()
         }//end ZStack
