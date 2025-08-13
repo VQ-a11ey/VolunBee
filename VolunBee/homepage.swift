@@ -74,10 +74,7 @@ struct homepage: View {
 
                     }
                 }
-            }
-        }
-    }
-}
+            
                 
              //vstack
 
