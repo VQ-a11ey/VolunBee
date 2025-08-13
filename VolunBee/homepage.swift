@@ -13,6 +13,17 @@ struct homepage: View {
     @State private var search = ""
     @Binding var name: String
     let categories = [""]
+    @State var name = ""
+    let categories = ["Animal Shelters", "Environment"]
+    
+    var filtered : [String] {
+        if search.isEmpty {
+            return categories
+        } else {
+            return categories.filter {$0.lowercased().contains(search.lowercased())
+            }
+        }
+    }
     
     var body: some View {
         NavigationStack {
