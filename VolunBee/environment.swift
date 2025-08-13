@@ -46,6 +46,12 @@ struct environment: View {
         }//end body
     }//end struct
 
+                
+            }//end VStack
+            .padding()
+        }//end ZStack
+    }//end body
+}//end struct
 
 #Preview {
     environment()

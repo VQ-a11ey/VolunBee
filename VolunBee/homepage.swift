@@ -11,8 +11,8 @@ struct homepage: View {
     @Namespace private var animationNamespace
     @State private var expanded = false
     @State private var search = ""
-    @State var name = ""
-    let categories = ["Animal Shelters", "Food Banks"]
+    @Binding var name: String
+    let categories = [""]
     
     var filtered : [String] {
         if search.isEmpty {
@@ -24,63 +24,63 @@ struct homepage: View {
     }
     
     var body: some View {
-        ZStack{
-            Image("background")
-                .resizable(resizingMode: .stretch)
-                .aspectRatio(contentMode: .fill)
-                .ignoresSafeArea()
+        NavigationStack {
+            ZStack{
+                Image("background")
+                    .resizable(resizingMode: .stretch)
+                    .aspectRatio(contentMode: .fill)
+                    .ignoresSafeArea()
                 
-            VStack(alignment: .leading){
-                HStack(alignment: .center, spacing: 20.0){
-                    Text("Welcome \(name)")
-                        .font(.title)
-                        .fontWeight(.regular)
-                        .multilineTextAlignment(.leading)
-                        .lineLimit(1)
-
-                        .padding([.top, .leading], 30.0)
+                VStack(alignment: .leading){
+                    HStack(alignment: .center, spacing: 20.0){
+                        Text("Welcome \(name)!")
+                            .font(.title)
+                            .fontWeight(.regular)
+                            .multilineTextAlignment(.leading)
+                            .lineLimit(1)
                         
-
-                    
-                    Spacer()
-                    Image("icon")
-                        .resizable(resizingMode: .stretch)
-                        .aspectRatio(contentMode: .fit)
-                        .padding()
-                        .frame(width: 60.0)
-                    
-                    
-                }
-                .padding(.bottom)
-                NavigationView {
-                    VStack{
-                        DisclosureGroup("Categories", isExpanded: $expanded){
-                            TextField("Search categories...", text: $search)
-                                .font(.title2)
+                            .padding([.top, .leading], 30.0)
+                        
+                        
+                        
+                        Spacer()
+                        Image("icon")
+                            .resizable(resizingMode: .stretch)
+                            .aspectRatio(contentMode: .fit)
+                            .padding()
+                            .frame(width: 60.0)
+                        
+                        
+                    } //HStack
+                    .padding(.bottom)
+                    NavigationView {
+                        VStack{
                             
-                            ForEach(filtered, id: \.self) { category in NavigationLink(destination: Text ("destination for \(category)")) {
-                                Text(category)
-                            }
-                            }
-                        }
+                            DisclosureGroup("Categories", isExpanded: $expanded){
+                                NavigationLink(destination: VolunBee.animalShelter()) {
+                                    Text("Animal Shelters")
+                                }
+                                NavigationLink(destination: VolunBee.environment()) {
+                                    Text("Enviorment")
+                                }
+                            } //disclosure group
+                        } //2nd VStack
                         .padding(.horizontal)
-                            
-                            
-                        }
-                        }
-            }
+                    } //NVeiw
+                }//v
+            } //ZStack
             .padding(.top)
-                        }
-
-                    }
-                }
+        }//nav stack
+    } //boddy
+} //struct
+                
             
                 
-             //vstack
 
         
     
 
 #Preview {
-    homepage()
+    @Previewable @State var previewValue = ""
+    homepage(name: $previewValue)
 }
