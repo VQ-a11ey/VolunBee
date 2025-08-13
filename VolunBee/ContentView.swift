@@ -16,7 +16,7 @@ struct ContentView: View {
     //        .aspectRatio(contentMode: .fill)
     //        .frame(width: 300.0, height: 300.0)
     
-    @State private var name = ""
+    @State  var name = ""
     @State private var textTitle = "What is your name?"
     
     
@@ -38,7 +38,7 @@ struct ContentView: View {
                         .font(.title)
                         .border(Color.gray, width:1)
 
-                    NavigationLink(destination: homepage()) {
+                    NavigationLink(destination: homepage(name: $name)) {
                         Text("Submit Name")
                             .padding()
                             .background(Color.yellow)
