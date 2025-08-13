@@ -25,17 +25,10 @@ struct environment: View {
                     .multilineTextAlignment(.leading)
                     .padding(.trailing, 120)
                 
-                Text("")
+                Text("San Francisco Recreation & Parks")
                     .font(.title2)
-                Text("")
+                Text("Hands On (Hands On Tomorrow")
                     .font(.title2)
-                Text("")
-                    .font(.title2)
-                Text("")
-                    .font(.title2)
-                    Text("")
-                    .font(.title2)
-                
                 
                 
                 
