@@ -13,8 +13,6 @@ struct homepage: View {
     @State private var search = ""
     @Binding var name: String
     let categories = [""]
-    @State var name = ""
-    let categories = ["Animal Shelters", "Environment"]
     
     var filtered : [String] {
         if search.isEmpty {
