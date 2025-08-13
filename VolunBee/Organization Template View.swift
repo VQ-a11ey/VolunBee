@@ -13,20 +13,30 @@ struct Organization_Template_View: View {
             Image("OpportunityBackground")
                 .resizable(resizingMode: .stretch)
                 .aspectRatio(contentMode: .fill)
-                .padding(.vertical, -65.0)
+                .ignoresSafeArea()
             VStack {
                 Text("Name of Organization")
                     .font(.title)
                     .fontWeight(.heavy)
                     .foregroundColor(Color.black)
                     .multilineTextAlignment(.leading)
-                    .padding(.bottom, 150)
+                    .padding(.bottom, 90)
                 VStack (spacing: 20){
                     Text("Description:HERE")
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal)
                     Text("Age limit: HERE")
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal)
                     Text("Locations:HERE")
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal)
                     Text("Requirements:HERE")
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal)
                     Text("Contact Details:HERE")
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal)
                     
                 }
             }
