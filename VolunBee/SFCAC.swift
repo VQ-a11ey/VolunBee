@@ -13,7 +13,7 @@ struct SFCAC: View {
             Image("OpportunityBackground")
                 .resizable(resizingMode: .stretch)
                 .aspectRatio(contentMode: .fill)
-                .padding(.vertical, -65.0)
+                .ignoresSafeArea()
             VStack {
                 Text("San Francisco Care & Control")
                     .font(.title)
