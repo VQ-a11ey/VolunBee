@@ -37,13 +37,15 @@ struct environment: View {
                     .font(.title2)
                 Text("Citizens' Climate Lobby")
                     .font(.title2)
-
                 
-            }//end VStack
-            .padding()
-        }//end ZStack
-    }//end body
-}//end struct
+                    
+                    
+                }//end VStack
+                .padding()
+            }//end ZStack
+        }//end body
+    }//end struct
+
 
 #Preview {
     environment()
