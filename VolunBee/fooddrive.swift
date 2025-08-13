@@ -30,8 +30,6 @@ struct fooddrive: View {
                     .font(.title2)
                 Text("The Food Pantry")
                     .font(.title2)
-                Text("JFCS's Food Runners")
-                    .font(.title2)
                 Text("Mission Food Hub")
                     .font(.title2)
                 Text("YMCA's Food Assistance")
