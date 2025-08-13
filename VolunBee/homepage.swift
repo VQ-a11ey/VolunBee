@@ -12,16 +12,7 @@ struct homepage: View {
     @State private var expanded = false
     @State private var search = ""
     @Binding var name: String
-    let categories = ["Animal Shelters", "enviornment"]
-    
-    var filtered : [String] {
-        if search.isEmpty {
-            return categories
-        } else {
-            return categories.filter {$0.lowercased().contains(search.lowercased())
-            }
-        }
-    }
+    let categories = [""]
     
     var body: some View {
         NavigationStack {
@@ -51,33 +42,33 @@ struct homepage: View {
                             .frame(width: 60.0)
                         
                         
-                    }
+                    } //HStack
                     .padding(.bottom)
                     NavigationView {
                         VStack{
-                           
+                            
                             DisclosureGroup("Categories", isExpanded: $expanded){
-                                TextField("Search categories...", text: $search)
-                                
-                                ForEach(filtered, id: \.self) { category in NavigationLink(destination: Text ("destination for \(category)")) {
-                                    Text(category)
+                                NavigationLink(destination: VolunBee.animalShelter()) {
+                                    Text("Animal Shelters")
                                 }
+                                NavigationLink(destination: VolunBee.environment()) {
+                                    Text("Enviorment")
                                 }
-                            }
-                            .padding(.horizontal)
-                            
-                            
-                        }
-                    }
+                            } //disclosure group
+                        } //2nd VStack
+                        .padding(.horizontal)
+                        
+                        
+                    } //VStack
                 }
+                } //ZStack
                 .padding(.top)
-            }//ztack
-        } //nav
-                    }
-                }
+            }//nav stack
+        } //body
+                    } //struct
+                
             
                 
-             //vstack
 
         
     
