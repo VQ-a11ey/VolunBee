@@ -33,8 +33,10 @@ private let demoPins: [PlacePin] = [
         coordinate: .init(latitude: 37.755457486145055, longitude: -122.3928919709645)),
   .init(title: "The Food Pantry", subtitle: "Food Bank - 500 De Haro St, San Francisco",category: .foodbank,
         coordinate: .init(latitude: 37.764818046095634, longitude: -122.39855680751523)),
-  .init(title: "Mission Food HUb", subtitle: "Food Bank - 701 Alabama St, San Francisco",category: .foodbank,
+  .init(title: "Mission Food Hub", subtitle: "Food Bank - 701 Alabama St, San Francisco",category: .foodbank,
         coordinate: .init(latitude: 37.76029084812457, longitude: -122.41131531326548)),
+  .init(title: "Grateful Dog Rescue", subtitle: "Animal Shelter - 1769 Lombard St, San Francisco",category: .animalShelter,
+        coordinate: .init(latitude: 37.804162634911215, longitude: -122.42867329196716)),
 
 ]
 // ---- Map view (no live location yet) ----
