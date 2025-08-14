@@ -100,9 +100,10 @@ struct homepage: View {
                                 .background(Color.shades)
                                 .cornerRadius(8)
                                 Spacer().frame(height:20)
-                                MapPage()
-                                           .frame(height: 150)
-                                           .cornerRadius(10)
+                                NavigationLink(destination: MapPage()) {
+                                    MapPage()
+                                        .frame(height: 150)
+                                    .cornerRadius(10)}
                                 ZStack {
                                     Image("flyingbee")
                                         .resizable(resizingMode: .stretch)
