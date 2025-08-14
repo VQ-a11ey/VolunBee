@@ -13,15 +13,6 @@ struct homepage: View {
     @State private var expanded = false
     @State private var search = ""
     @Binding var name: String
-    let categories = [""]
-        var filtered : [String] {
-            if search.isEmpty {
-                return categories
-            } else {
-                return categories.filter {$0.lowercased().contains(search.lowercased())
-                }
-            }
-        }
         
         var body: some View {
             NavigationStack {
@@ -60,8 +51,8 @@ struct homepage: View {
                             .foregroundColor(Color("dark"))
                             .padding(.leading)
                         
-                        Text("\n🐝 Fun Fact 🐝")
-                            .font(.title)
+                        Text("🐝 Fun Fact 🐝")
+                            .font(.title2)
                             .fontWeight(.semibold)
                             .foregroundColor(Color("brownish"))
                             .padding(.leading)
@@ -74,9 +65,7 @@ struct homepage: View {
                             .fontWeight(.semibold)
                             .foregroundColor(Color("dark"))
                             .padding(.leading)
-                        NavigationView {
                             VStack{
-                                
                                 DisclosureGroup("Categories") {
                                     
                                     NavigationLink(destination: VolunBee.animalShelter()) {
@@ -110,21 +99,26 @@ struct homepage: View {
                                 .foregroundColor(.brownish)
                                 .background(Color.shades)
                                 .cornerRadius(8)
-                                Text("\n\n\n\n\n\n")
+                                Spacer().frame(height:20)
+                                MapPage()
+                                           .frame(height: 150)
+                                           .cornerRadius(10)
                                 ZStack {
                                     Image("flyingbee")
                                         .resizable(resizingMode: .stretch)
                                         .aspectRatio(contentMode: .fit)
-                                        .padding([.top, .leading])
-                                    Spacer()
-                                    Text("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVolunBee")
-                                        .foregroundColor(Color("brownish"))
-                                    
+                                        .padding([.leading, .bottom])
+
+                                    VStack{
+                                        Text("\n\n\n\n\n\nVolunBee")
+                                            .foregroundColor(Color("brownish"))
+                                        }
                                 }//ZStack
+                                Spacer().frame(height:20)
                             }
                             .padding(.horizontal) //2nd VStack
                             
-                        } //NVeiw
+                        //NVeiw
                     }//v
                 } //ZStack
                 .padding(.top)
