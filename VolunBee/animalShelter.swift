@@ -52,6 +52,7 @@ struct animalShelter: View {
                     
                 }//end VStack
                 .padding()
+                
             }//end ZStack
         } //nav
     }//end Body
