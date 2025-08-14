@@ -66,6 +66,7 @@ struct homepage: View {
                         .foregroundColor(Color("brownish"))
                         .padding(.leading)
                     Text("Bees remind us that even the smallest contributions can build something sweet. ")
+                        .font(.title3)
                         .foregroundColor(Color("brownish"))
                         .padding([.leading, .bottom, .trailing])
                     Text("Volunteer Now!")
@@ -83,11 +84,16 @@ struct homepage: View {
                                 NavigationLink(destination: VolunBee.environment()) {
                                     Text("Enviorment")
                                 }
+                                .padding()
+                                .frame(width: 350.0, height: 30.0)
+                                .background(Color.skin)
+                                .foregroundColor(.brownish)
+                                .cornerRadius(8)
                                 NavigationLink(destination: VolunBee.fooddrive()) {
                                     Text("Food Drives")
                                 }
                             } //disclosure group
-                            .font(.headline)
+                            .font(.title3)
                             .foregroundColor(Color("brownish"))
                                 Text("\n\n\n\n\n\n")
                             ZStack {

@@ -31,6 +31,7 @@ struct ContentView: View {
                     Text(textTitle)
                         .font(
                             .custom("AmericanTypewriter", fixedSize: 23))
+                        .foregroundColor(Color("brownish"))
                         .multilineTextAlignment(.center)
                     TextField("Type name here", text: $name)
                         .padding()
