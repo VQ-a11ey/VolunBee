@@ -82,7 +82,7 @@ struct homepage: View {
                                     Text("Animal Shelters")
                                 }
                                 NavigationLink(destination: VolunBee.environment()) {
-                                    Text("Enviorment")
+                                    Text("Environment")
                                 }
                                 .padding()
                                 .frame(width: 350.0, height: 30.0)
