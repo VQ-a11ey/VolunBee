@@ -39,7 +39,7 @@ struct SFCAC: View {
                         .foregroundColor(Color("brownish"))
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 2.0)
-                    Text("\n\n\n\n\n\nContact Details:\n  Phone:(415)554 - 9400, Email:ACC@SFGOV.COM \n https://www.sfanimalcare.org/volunteer/")
+                    Text("\n\n\nContact Details:\n  Phone:(415)554 - 9400, Email:ACC@SFGOV.COM \n https://www.sfanimalcare.org/volunteer/")
                         .foregroundColor(Color("dark"))
                         .multilineTextAlignment(.center)
                         .padding(.horizontal)
