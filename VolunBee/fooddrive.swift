@@ -9,8 +9,7 @@ import SwiftUI
 
 struct fooddrive: View {
     var body: some View {
-        NavigationStack {
-            
+        NavigationStack{
             ZStack {
                 Image("yellowBackground")
                     .resizable(resizingMode: .stretch)
@@ -30,12 +29,11 @@ struct fooddrive: View {
                     NavigationLink(destination: SFMarinFoodBank()){
                         Text("San Francisco/Marin Food Bank")
                     }
+                    .font(.title2)
+                    NavigationLink(destination: TheNewPantry()) {
+                        Text("The Food Pantry")}
                         .font(.title2)
-                    NavigationLink(destination: TheNewPantry()){
-                        Text("The Food Pantry")
-                    }
-                        .font(.title2)
-                    NavigationLink(destination: MissionFoodHub()){
+                    NavigationLink(destination: MissionFoodHub()) {
                         Text("Mission Food Hub")
                     }
                         .font(.title2)
@@ -46,6 +44,10 @@ struct fooddrive: View {
                     NavigationLink(destination: feedingAmerica()){
                         Text("Feeding America")
                     }
+                    .font(.title2)
+                    Text("YMCA's Food Assistance")
+                        .font(.title2)
+                    Text("Feeding America")
                         .font(.title2)
                     
                     VStack {
