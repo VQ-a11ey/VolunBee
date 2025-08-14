@@ -54,10 +54,10 @@ struct homepage: View {
                         
                         
                     } //HStack'
-                    Text("Volunteering Oppurtunities in \nSan Franscisco")
+                    Text("Volunteering Oppurtunities in \nSan Francisco")
                         .font(.largeTitle)
                         .fontWeight(.bold)
-                        .foregroundColor(Color("brownish"))
+                        .foregroundColor(Color("dark"))
                         .padding(.leading)
                         
                     Text("\n🐝 Fun Fact 🐝")
@@ -72,29 +72,44 @@ struct homepage: View {
                     Text("Volunteer Now!")
                         .font(.title2)
                         .fontWeight(.semibold)
-                        .foregroundColor(Color("brownish"))
+                        .foregroundColor(Color("dark"))
                         .padding(.leading)
                     NavigationView {
                         VStack{
-                            
-                            DisclosureGroup("Categories", isExpanded: $expanded){
+                          
+                            DisclosureGroup("Categories") {
+                               
                                 NavigationLink(destination: VolunBee.animalShelter()) {
                                     Text("Animal Shelters")
                                 }
+                                    .padding()
+                                    .frame(width: 350.0, height: 30.0)
+                                    .background(Color.dusk)
+                                    .foregroundColor(.skin)
+                                    .cornerRadius(8)
+                                
                                 NavigationLink(destination: VolunBee.environment()) {
                                     Text("Environment")
                                 }
-                                .padding()
-                                .frame(width: 350.0, height: 30.0)
-                                .background(Color.skin)
-                                .foregroundColor(.brownish)
-                                .cornerRadius(8)
+                                    .padding()
+                                    .frame(width: 350.0, height: 30.0)
+                                    .background(Color.skin)
+                                    .foregroundColor(.brownish)
+                                    .cornerRadius(8)
+                                
                                 NavigationLink(destination: VolunBee.fooddrive()) {
                                     Text("Food Drives")
                                 }
-                            } //disclosure group
+                                    .padding()
+                                    .frame(width: 350.0, height: 30.0)
+                                    .background(Color.dusk)
+                                    .foregroundColor(.skin)
+                                    .cornerRadius(8)                      }//discloseurereonwaneaifnea
+                            .padding()
                             .font(.title3)
-                            .foregroundColor(Color("brownish"))
+                            .foregroundColor(.brownish)
+                            .background(Color.shades)
+                            .cornerRadius(8)
                                 Text("\n\n\n\n\n\n")
                             ZStack {
                                 Image("flyingbee")
