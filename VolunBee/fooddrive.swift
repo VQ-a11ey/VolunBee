@@ -26,7 +26,7 @@ struct fooddrive: View {
                         .fontWeight(.bold)
                         .multilineTextAlignment(.leading)
                         .padding(.trailing, 120)
-                    NavigationLink(destination: SFMarinFoodBank()) {
+                    NavigationLink(destination: SFMarinFoodBank()){
                         Text("San Francisco/Marin Food Bank")
                     }
                     .font(.title2)
@@ -35,6 +35,14 @@ struct fooddrive: View {
                         .font(.title2)
                     NavigationLink(destination: MissionFoodHub()) {
                         Text("Mission Food Hub")
+                    }
+                        .font(.title2)
+                    NavigationLink(destination: YMCA()){
+                        Text("YMCA's Food Assistance")
+                    }
+                        .font(.title2)
+                    NavigationLink(destination: feedingAmerica()){
+                        Text("Feeding America")
                     }
                     .font(.title2)
                     Text("YMCA's Food Assistance")
@@ -49,9 +57,10 @@ struct fooddrive: View {
                 }//end VStack
                 .padding()
             }//end ZStack
-        }//end body
-    }//end struct
-}
+        }//end nav
+    }//end body
+}//end struct
+
 #Preview {
     fooddrive()
 }
