@@ -81,7 +81,7 @@ struct homepage: View {
                                     Text("Animal Shelters")
                                 }
                                 NavigationLink(destination: VolunBee.environment()) {
-                                    Text("Enviorment")
+                                    Text("Environment")
                                 }
                                 NavigationLink(destination: VolunBee.fooddrive()) {
                                     Text("Food Drives")
