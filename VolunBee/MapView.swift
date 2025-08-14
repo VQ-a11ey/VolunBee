@@ -37,6 +37,18 @@ private let demoPins: [PlacePin] = [
         coordinate: .init(latitude: 37.76029084812457, longitude: -122.41131531326548)),
   .init(title: "Grateful Dog Rescue", subtitle: "Animal Shelter - 1769 Lombard St, San Francisco",category: .animalShelter,
         coordinate: .init(latitude: 37.804162634911215, longitude: -122.42867329196716)),
+  .init(title: "San Francisco Zoo & Gardens", subtitle: "Animal Shelter - Sloat Blvd &, Upper Great Hwy, San Francisco",category: .animalShelter,
+        coordinate: .init(latitude: 37.7332108235831, longitude: -122.50282409440638)),
+  .init(title: "Hands On(Bay Area)", subtitle: "Environment - 275 6th St, San Francisco",category: .environment,
+        coordinate: .init(latitude: 37.77913456893022, longitude: -122.40583320162277)),
+  .init(title: "SFSU's School of the Environment", subtitle: "Environment - 1600 Holloway Ave, San Francisco",category: .environment,
+        coordinate: .init(latitude: 37.72254180314104, longitude: -122.47551628867042)),
+  .init(title: "San Francisco Environment Department", subtitle: "Environment - 1455 Market St Suite 13A, San Francisco",category: .environment,
+        coordinate: .init(latitude: 37.775641317722844, longitude: -122.4170202272948)),
+  .init(title: "Citizens' Climate Lobby", subtitle: "Environment - 110 The Embarcadero, San Francisco",category: .environment,
+        coordinate: .init(latitude: 37.79342127580573, longitude: -122.39185927332386)),
+
+  
 
 ]
 // ---- Map view (no live location yet) ----
