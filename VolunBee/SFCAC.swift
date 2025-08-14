@@ -14,32 +14,41 @@ struct SFCAC: View {
                 .resizable(resizingMode: .stretch)
                 .aspectRatio(contentMode: .fill)
                 .ignoresSafeArea()
+            
             VStack {
-                Text("San Francisco Care & Control")
+                Text("\n\nSan Francisco Care & Control")
                     .font(.title)
                     .fontWeight(.heavy)
-                    .foregroundColor(Color.black)
+                    .foregroundColor(Color("dark"))
                     .multilineTextAlignment(.leading)
-                    .padding(.bottom, 90)
+                    .padding(.horizontal)
+                Image("SFCAC")
+                    .resizable(resizingMode: .stretch)
+                    .aspectRatio(contentMode: .fit)
+                    .padding(.top, -15.0)
                 VStack (spacing: 20){
-                    Text("Description: Volunteering include - Small Animal Volunteers, Cat Volunteers, Vet Volunteers, Animal Transporters, OUtreach Volunteers, and Kitten (and other) Volunteers")
+                    Text("\n\nDescription: Volunteering include - Small Animal Volunteers, Cat Volunteers, Vet Volunteers, Animal Transporters, OUtreach Volunteers, and Kitten (and other) Volunteers")
+                        .foregroundColor(Color("brownish"))
                         .multilineTextAlignment(.center)
                         .padding(.horizontal)
                     Text("Age limit: 18+, 12-17 accompanied by an adult")
+                        .foregroundColor(Color("brownish"))
                     Text("Locations: 1419 Bryant Street, San Francisco")
+                        .foregroundColor(Color("brownish"))
                     Text("Requirements: Must be able to work one year, minimum 2 hour shirt per week.")
+                        .foregroundColor(Color("brownish"))
                         .multilineTextAlignment(.center)
                         .padding(.horizontal, 2.0)
-                    Text("Contact Details:\n  Phone:(415)554 - 9400, Email:ACC@SFGOV.COM \n https://www.sfanimalcare.org/volunteer/")
+                    Text("\n\n\n\n\n\nContact Details:\n  Phone:(415)554 - 9400, Email:ACC@SFGOV.COM \n https://www.sfanimalcare.org/volunteer/")
+                        .foregroundColor(Color("dark"))
                         .multilineTextAlignment(.center)
                         .padding(.horizontal)
-                   
-                }
-                .padding()
-            }
+                    
+                } //Vtack
+            }//again
             
-        }
-    }
+        }//Ztack
+    }//body
 }
 
 #Preview {
